@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload & Access Notes</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 0; }
+        header { background: blue; padding: 15px; text-align: center; color: white; }
+        h1 { margin: 0; }
+        main { padding: 20px; }
+        form {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        label { font-weight: bold; }
+        button, .link-btn {
+            margin-top: 10px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            background: blue;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        button:hover, .link-btn:hover { background: blue; }
+        .btn-container { margin-top: 20px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>📑 Notes Portal</h1>
+</header>
+<main>
+   
+<a href="/" class="link-btn">⬅ Back to Home</a>
+    <!-- Upload Notes -->
+    <form action="/notes" method="POST" enctype="multipart/form-data">
+        <h2>➕ Add Notes</h2>
+        <label for="branch">Select Branch:</label>
+        <select name="branch" id="branch" required>
+            <option value="">--Choose Branch--</option>
+            <option value="CSE">Computer Science Engineering (CSE)</option>
+            <option value="ECE">Electronics & Communication Engineering (ECE)</option>
+            <option value="ME">Mechanical Engineering (ME)</option>
+            <option value="CE">Civil Engineering (CE)</option>
+            <option value="EEE">Electrical & Electronics Engineering (EEE)</option>
+            <option value="IT">Information Technology (IT)</option>
+        </select>
+        <br><br>
+        <label for="note">Upload File:</label>
+        <input type="file" name="note" id="note" required>
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- View/Access Notes -->
+    <div class="btn-container">
+        <h2>📂 Access Notes</h2>
+        <a href="/view-notes" class="link-btn">View Notes</a>
+    </div>
+    
+
+</main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internships</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #searchBar {
+            width: 50%;
+            padding: 10px;
+            margin: 15px auto;
+            display: block;
+            border: 2px solid #444;
+            border-radius: 5px;
+        }
+        ul { list-style-type: none; padding: 0; }
+        li {
+            background: #f2f2f2;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 8px;
+        }
+        li a { font-weight: bold; color: #0066cc; text-decoration: none; }
+        li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Internship Opportunities 💼</h1>
+</header>
+
+<main>
+    <!-- 🔍 Search Bar -->
+  
+<a href="/" class="link-btn">⬅ Back to Home</a>
+    <input type="text" id="searchBar" placeholder="Search internships...">
+
+    <ul id="internshipList">
+        <div class="card"><li>
+            <a href="https://internshala.com" target="_blank">Internshala</a><br>
+            Duration: Varies (1-6 months)<br>
+            Benefits: Wide range of companies, easy apply for students.
+        </li></div>
+        <div class="card"><li>
+            <a href="https://careers.tcs.com" target="_blank">TCS Internship</a><br>
+            Duration: 8-12 weeks<br>
+            Benefits: Industry exposure, certificate from TCS.
+        </li></div>
+        <div class="card"><li>
+            <a href="https://www.microsoft.com/en-in/careers" target="_blank">Microsoft Internship</a><br>
+            Duration: 12 weeks<br>
+            Benefits: Hands-on projects, chance for full-time job.
+        </li></div>
+        <div class="card"><li>
+            <a href="https://careers.google.com/students/" target="_blank">Google Internship</a><br>
+            Duration: 10-12 weeks<br>
+            Benefits: Work on real products, stipend, mentorship.
+        </li></div>
+        <div class="card"><li>
+            <a href="https://www.ibm.com/employment/internships/" target="_blank">IBM Internship</a><br>
+            Duration: 2-6 months<br>
+            Benefits: Research & development, exposure to AI & cloud.
+        </li></div>
+        <div class="card"><li>
+            <a href="https://careers.infosys.com/" target="_blank">Infosys InStep</a><br>
+            Duration: 8 weeks<br>
+            Benefits: Live projects, global exposure, certificate.
+        </li></div>
+        <div class="card"><li>
+            <a href="https://www.nasa.gov/careers/" target="_blank">NASA Internship</a><br>
+            Duration: 10 weeks<br>
+            Benefits: Research experience, global recognition.
+        </li></div>
+    </ul>
+    
+
+</main>
+
+<!-- Simple Search Script -->
+<script>
+    const searchBar = document.getElementById("searchBar");
+    const list = document.getElementById("internshipList");
+    const items = list.getElementsByTagName("li");
+
+    searchBar.addEventListener("keyup", function() {
+        const filter = searchBar.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            let text = items[i].innerText.toLowerCase();
+            if (text.includes(filter)) {
+                items[i].style.display = "";
+            } else {
+                items[i].style.display = "none";
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head><title>Internships</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header><h1>Internship Opportunities 💼</h1></header>
+<main>
+    <ul>
+        <li><a href="https://internshala.com" target="_blank">Internshala</a></li>
+        <li><a href="https://careers.tcs.com" target="_blank">TCS Internships</a></li>
+        <li><a href="https://www.microsoft.com/en-in/careers" target="_blank">Microsoft</a></li>
+    </ul>
+</main>
+</body>
+</html>
