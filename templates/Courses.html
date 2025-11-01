@@ -1,45 +1,260 @@
 <!DOCTYPE html>
-<html>
-<head><title>Courses</title><link rel="stylesheet" href="/static/style.css">
- <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: blue; }
-        h2 { color: green; }
-        ul { list-style-type: square; }
-        a { text-decoration: none; color: blue; }
-        a:hover { color: blue; } </style>
-        </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EngScholar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .course-card h3 {
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .course-card p {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .course-card b {
+            color: #333;
+        }
+        
+        .badge-free {
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .badge-paid {
+            background: #ffc107;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .btn-enroll {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .btn-enroll:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .btn-back {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 10px 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        
+        .btn-back:hover {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
 <body>
-<header><h1>Free Courses & Certifications 📚</h1></header>
-<main>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/dashboard">🎓 EngScholar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/scholarships">Scholarships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/internships">Internships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/notes">Notes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-
-<a href="/" class="link-btn">⬅ Back to Home</a>
-   
-
-    <div class="card">
-      <h3>1. Python for Engineers</h3>
-      <p><b>Branch:</b> CSE/IT</p>
-      <p><b>Prerequisites:</b> Basics of programming</p>
-      <p><b>Duration:</b> 6 weeks</p>
-      <p><b>Outcome:</b> Problem-solving & scripting</p>
-      <p><b>Mode:</b> Free</p>
-      <a href="https://www.coursera.org/specializations/python" target="_blank">Enroll</a>
+    <div class="page-header">
+        <div class="container text-center">
+            <h1>📚 Free Courses & Certifications</h1>
+            <p class="lead mb-0">Boost your skills with these industry-recognized courses</p>
+        </div>
     </div>
- <div class="card"><h3>2. VLSI Design NPTEL</h3><p><b>Branch:</b> ECE</p><p><b>Prerequisites:</b> Digital Logic</p><p><b>Duration:</b> 12 weeks</p><p><b>Outcome:</b> RTL to GDS Flow</p><p><b>Mode:</b> Free</p><a href="https://nptel.ac.in/" target="_blank">Enroll</a></div>
-    <div class="card"><h3>3. Machine Learning Stanford</h3><p><b>Branch:</b> CSE</p><p><b>Prerequisites:</b> Linear Algebra, Python</p><p><b>Duration:</b> 11 weeks</p><p><b>Outcome:</b> ML model building</p><p><b>Mode:</b> Paid</p><a href="https://www.coursera.org/learn/machine-learning" target="_blank">Enroll</a></div>
-    <div class="card"><h3>4. Embedded Systems</h3><p><b>Branch:</b> ECE</p><p><b>Prerequisites:</b> C programming</p><p><b>Duration:</b> 8 weeks</p><p><b>Outcome:</b> Microcontroller projects</p><p><b>Mode:</b> Free</p><a href="https://onlinecourses.nptel.ac.in/" target="_blank">Enroll</a></div>
-    <div class="card"><h3>5. Data Structures in C</h3><p><b>Branch:</b> CSE</p><p><b>Prerequisites:</b> C programming</p><p><b>Duration:</b> 10 weeks</p><p><b>Outcome:</b> Problem-solving skills</p><p><b>Mode:</b> Free</p><a href="https://nptel.ac.in/" target="_blank">Enroll</a></div>
-    <div class="card"><h3>6. Cloud Computing Basics</h3><p><b>Branch:</b> IT</p><p><b>Prerequisites:</b> Networking basics</p><p><b>Duration:</b> 6 weeks</p><p><b>Outcome:</b> Understanding AWS, Azure</p><p><b>Mode:</b> Paid</p><a href="https://aws.amazon.com/training/" target="_blank">Enroll</a></div>
-    <div class="card"><h3>7. Robotics with Arduino</h3><p><b>Branch:</b> Mech/ECE</p><p><b>Prerequisites:</b> Basic electronics</p><p><b>Duration:</b> 4 weeks</p><p><b>Outcome:</b> Build robots</p><p><b>Mode:</b> Free</p><a href="https://www.udemy.com/" target="_blank">Enroll</a></div>
-    <div class="card"><h3>8. AI for Everyone</h3><p><b>Branch:</b> All</p><p><b>Prerequisites:</b> None</p><p><b>Duration:</b> 4 weeks</p><p><b>Outcome:</b> AI basics</p><p><b>Mode:</b> Free</p><a href="https://www.coursera.org/learn/ai-for-everyone" target="_blank">Enroll</a></div>
-    <div class="card"><h3>9. Cybersecurity Basics</h3><p><b>Branch:</b> CSE/IT</p><p><b>Prerequisites:</b> Networking</p><p><b>Duration:</b> 5 weeks</p><p><b>Outcome:</b> Threat prevention</p><p><b>Mode:</b> Paid</p><a href="https://www.coursera.org/specializations/cyber-security" target="_blank">Enroll</a></div>
-    <div class="card"><h3>10. MATLAB for Engineers</h3><p><b>Branch:</b> ECE/Mech</p><p><b>Prerequisites:</b> Math knowledge</p><p><b>Duration:</b> 6 weeks</p><p><b>Outcome:</b> Signal/system analysis</p><p><b>Mode:</b> Free</p><a href="https://matlabacademy.mathworks.com/" target="_blank">Enroll</a></div>
 
+    <div class="container pb-5">
+        <a href="/dashboard" class="btn-back">← Back to Dashboard</a>
 
-    
-  </section>
+        <div class="course-card">
+            <h3>1. Python for Engineers</h3>
+            <p><b>Branch:</b> CSE/IT</p>
+            <p><b>Prerequisites:</b> Basics of programming</p>
+            <p><b>Duration:</b> 6 weeks</p>
+            <p><b>Outcome:</b> Problem-solving & scripting</p>
+            <span class="badge-free">Free</span>
+            <br>
+            <a href="https://www.coursera.org/specializations/python" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>2. VLSI Design NPTEL</h3>
+            <p><b>Branch:</b> ECE</p>
+            <p><b>Prerequisites:</b> Digital Logic</p>
+            <p><b>Duration:</b> 12 weeks</p>
+            <p><b>Outcome:</b> RTL to GDS Flow</p>
+            <span class="badge-free">Free</span>
+            <br>
+            <a href="https://nptel.ac.in/" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>3. Machine Learning Stanford</h3>
+            <p><b>Branch:</b> CSE</p>
+            <p><b>Prerequisites:</b> Linear Algebra, Python</p>
+            <p><b>Duration:</b> 11 weeks</p>
+            <p><b>Outcome:</b> ML model building</p>
+            <span class="badge-paid">Paid</span>
+            <br>
+            <a href="https://www.coursera.org/learn/machine-learning" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>4. Embedded Systems</h3>
+            <p><b>Branch:</b> ECE</p>
+            <p><b>Prerequisites:</b> C programming</p>
+            <p><b>Duration:</b> 8 weeks</p>
+            <p><b>Outcome:</b> Microcontroller projects</p>
+            <span class="badge-free">Free</span>
+            <br>
+            <a href="https://onlinecourses.nptel.ac.in/" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>5. Data Structures in C</h3>
+            <p><b>Branch:</b> CSE</p>
+            <p><b>Prerequisites:</b> C programming</p>
+            <p><b>Duration:</b> 10 weeks</p>
+            <p><b>Outcome:</b> Problem-solving skills</p>
+            <span class="badge-free">Free</span>
+            <br>
+            <a href="https://nptel.ac.in/" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>6. Cloud Computing Basics</h3>
+            <p><b>Branch:</b> IT</p>
+            <p><b>Prerequisites:</b> Networking basics</p>
+            <p><b>Duration:</b> 6 weeks</p>
+            <p><b>Outcome:</b> Understanding AWS, Azure</p>
+            <span class="badge-paid">Paid</span>
+            <br>
+            <a href="https://aws.amazon.com/training/" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>7. Robotics with Arduino</h3>
+            <p><b>Branch:</b> Mech/ECE</p>
+            <p><b>Prerequisites:</b> Basic electronics</p>
+            <p><b>Duration:</b> 4 weeks</p>
+            <p><b>Outcome:</b> Build robots</p>
+            <span class="badge-free">Free</span>
+            <br>
+            <a href="https://www.udemy.com/" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>8. AI for Everyone</h3>
+            <p><b>Branch:</b> All</p>
+            <p><b>Prerequisites:</b> None</p>
+            <p><b>Duration:</b> 4 weeks</p>
+            <p><b>Outcome:</b> AI basics</p>
+            <span class="badge-free">Free</span>
+            <br>
+            <a href="https://www.coursera.org/learn/ai-for-everyone" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>9. Cybersecurity Basics</h3>
+            <p><b>Branch:</b> CSE/IT</p>
+            <p><b>Prerequisites:</b> Networking</p>
+            <p><b>Duration:</b> 5 weeks</p>
+            <p><b>Outcome:</b> Threat prevention</p>
+            <span class="badge-paid">Paid</span>
+            <br>
+            <a href="https://www.coursera.org/specializations/cyber-security" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>10. MATLAB for Engineers</h3>
+            <p><b>Branch:</b> ECE/Mech</p>
+            <p><b>Prerequisites:</b> Math knowledge</p>
+            <p><b>Duration:</b> 6 weeks</p>
+            <p><b>Outcome:</b> Signal/system analysis</p>
+            <span class="badge-free">Free</span>
+            <br>
+            <a href="https://matlabacademy.mathworks.com/" target="_blank" class="btn-enroll">Enroll Now</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-

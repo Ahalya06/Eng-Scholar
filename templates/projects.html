@@ -1,56 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Projects</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - EngScholar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; }
-        h1 { color: darkgreen; }
-        ol { padding-left: 20px; }
-        li {
-            margin: 10px 0;
-            padding: 10px;
-            background: #f4f4f4;
-            border-radius: 8px;
+        body {
+            background: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 5px solid #667eea;
+        }
+        
+        .project-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .project-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 15px;
+        }
+        
+        .project-title {
+            color: #333;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline;
+        }
+        
+        .project-description {
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        
+        .btn-back {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 10px 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        
+        .btn-back:hover {
+            background: #667eea;
+            color: white;
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Project Ideas 💡</h1>
-</header>
-<main>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/dashboard">🎓 EngScholar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/scholarships">Scholarships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/internships">Internships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/notes">Notes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<a href="/" class="link-btn">⬅ Back to Home</a>
-    <ol>
-       <div class="card"> <li><b>Student Attendance System</b> – Track student attendance using simple file handling.</li></div>
-        <div class="card"><li><b>Library Management (C++)</b> – Add, search, and delete books from a small library database.</li></div>
-        <div class="card"><li><b>AI Chatbot (Python)</b> – Reply to user queries using if-else or a small dataset.</li></div>
-        <div class="card"><li><b>Portfolio Website</b> – A personal resume website using HTML & CSS.</li></div>
-        <div class="card"><li><b>Calculator App</b> – Create a simple calculator in Python or JavaScript.</li></div>
-        <div class="card"><li><b>To-Do List</b> – Add and remove daily tasks using HTML, CSS, and JavaScript.</li></div>
-        <div class="card"><li><b>Weather App</b> – Fetch weather data using free APIs (Python/JS).</li></div>
-        <div class="card"><li><b>Quiz Game</b> – Multiple-choice quiz in Python (easy with loops & lists).</li></div>
-        <div class="card"><li><b>Currency Converter</b> – Convert INR ↔ USD, EUR, etc. (Python with simple math).</li></div>
-        <div class="card"><li><b>Online Notes App</b> – Save and manage notes using HTML forms & local storage.</li></div>
-    </ol>
-  
+    <div class="page-header">
+        <div class="container text-center">
+            <h1>💡 Project Ideas</h1>
+            <p class="lead mb-0">Build your portfolio with these creative project ideas</p>
+        </div>
+    </div>
 
-</main>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head><title>Projects</title><link rel="stylesheet" href="/static/style.css"></head>
-<body>
-<header><h1>Project Ideas 💡</h1></header>
-<main>
-    <ol>
-        <li>Student Attendance System</li>
-        <li>Library Management using C++</li>
-        <li>AI Chatbot (Python)</li>
-        <li>Portfolio Website</li>
-    </ol>
-</main>
+    <div class="container pb-5">
+        <a href="/dashboard" class="btn-back">← Back to Dashboard</a>
+
+        <div class="project-card">
+            <span class="project-number">1</span>
+            <span class="project-title">Student Attendance System</span>
+            <p class="project-description">Track student attendance using simple file handling. Perfect for learning file operations and data management.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">2</span>
+            <span class="project-title">Library Management (C++)</span>
+            <p class="project-description">Add, search, and delete books from a small library database. Great for understanding OOP concepts.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">3</span>
+            <span class="project-title">AI Chatbot (Python)</span>
+            <p class="project-description">Reply to user queries using if-else or a small dataset. Introduction to natural language processing.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">4</span>
+            <span class="project-title">Portfolio Website</span>
+            <p class="project-description">A personal resume website using HTML & CSS. Showcase your skills and projects professionally.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">5</span>
+            <span class="project-title">Calculator App</span>
+            <p class="project-description">Create a simple calculator in Python or JavaScript. Learn about GUI development and event handling.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">6</span>
+            <span class="project-title">To-Do List</span>
+            <p class="project-description">Add and remove daily tasks using HTML, CSS, and JavaScript. Practice DOM manipulation and local storage.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">7</span>
+            <span class="project-title">Weather App</span>
+            <p class="project-description">Fetch weather data using free APIs (Python/JS). Learn API integration and data visualization.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">8</span>
+            <span class="project-title">Quiz Game</span>
+            <p class="project-description">Multiple-choice quiz in Python (easy with loops & lists). Fun way to learn control structures.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">9</span>
+            <span class="project-title">Currency Converter</span>
+            <p class="project-description">Convert INR ↔ USD, EUR, etc. (Python with simple math). Practice working with real-time exchange rates.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-number">10</span>
+            <span class="project-title">Online Notes App</span>
+            <p class="project-description">Save and manage notes using HTML forms & local storage. Build a practical CRUD application.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
